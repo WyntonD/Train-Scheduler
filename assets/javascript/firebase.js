@@ -48,6 +48,8 @@ $("#train-time-input").val("");
 $("#frequency-input").val("");
 });
 
+console.log(moment().format('LT'));
+
 database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
 
@@ -65,7 +67,7 @@ var newRow = $("<tr>").append(
     $("<td>").text(trainName),
     $("<td>").text(trainDestination),
     $("<td>").text(trainFrequency),
-    $("<td>").text(trainComing)
+    $("<td>").text(trainComing + " min"),
 );
 
 $("#train-table > tbody").append(newRow);
