@@ -68,6 +68,7 @@ var newRow = $("<tr>").append(
     $("<td>").text(trainDestination),
     $("<td>").text(trainFrequency),
     $("<td>").text(trainComing + " min"),
+    $("<td>").text()
 );
 
 $("#train-table > tbody").append(newRow);
